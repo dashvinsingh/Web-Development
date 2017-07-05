@@ -1,0 +1,14 @@
+<% if user_signed_in? %>
+  <div>Signed in as... <%= current_user.email %>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %></div>
+<% end %>
+
+<h1 style= "font-size:400%">GOLF CLUB CONTROLLER</h1>
+<table>
+<% @clubs.each do |c|%>
+<tr>
+  <td><%= c.name %></td>
+  <td><%= c.slot %></td>
+</tr>
+<% end %>
+</table>

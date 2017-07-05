@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+  <div>Signed in as... <%= current_user.email %> <%= link_to('Logout', destroy_user_session_path, method: :delete) %></div>
+<% end %>
+
+<h1 style= "font-size:400%">Golf Reservation</h1>
+<%= link_to 'Show Reservations', "/clubs" %>
